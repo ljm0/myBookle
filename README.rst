@@ -1,7 +1,7 @@
 goodreads
 =========
 
-get books and authors from goodreads, based on https://github.com/sefakilic/goodreads
+using getjson.py to get books and authors from goodreads, based on https://github.com/sefakilic/goodreads
 
 |Build Status| |Coverage Status| |Documentation Status| |Downloads|
 |Latest Version| |Supported Python versions| |License|
