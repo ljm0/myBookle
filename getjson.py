@@ -10,26 +10,27 @@ book_list = []
 author_list = []
 author_id_list = []
 #get how many books
-while(book_number < 2000):
+while(book_number < 10):
     try:
         book = gc.book(book_number)
         tag = book.popular_shelves
         new_tag = [str(xt) for xt in tag]
         book_dic = {
-            "id": book_number,
+            "id": int(book_number), #FIXME
             "name": book.title,
-            "authors": book.authors[0].name,
+            "authors": [author.name for author in book.authors],
             "ISBN": book.isbn,
-            "rating": book.average_rating,
-            "publishYear": book.publication_date[2],
-            "pages": book.num_pages,
+            "rating": float(book.average_rating),
+            "publishYear": int(book.publication_date[2]),
+            "pages": int(book.num_pages),
             "link": book.link,
             "tags": new_tag,
             "abstract": book.description
         }
         book_list.append(book_dic)
-        author_temp = gc.find_author(book.authors[0].name)
-        author_id_list.append(author_temp.gid)
+        for tempAuthorName in [author.name for author in book.authors] :
+            author_temp = gc.find_author(tempAuthorName)
+            author_id_list.append(author_temp.gid)
         book_number += 1
     except:
         book_number += 1
@@ -41,7 +42,7 @@ for author_id in new_author_id_list:
     author_book = author.books
     new_author_book = [str(xb) for xb in author_book]
     authors_dic = {
-        'id': author.gid,
+        'id': int(author.gid),
         "name": author.name,
         "nationality": author.hometown,
         "birthday": author.born_at,
