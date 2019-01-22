@@ -9,9 +9,10 @@ book_number = 1
 book_list = []
 author_list = []
 book_search_dic = {}
+
 author_id_list_all = []
 #get how many books
-while(book_number < 5):
+while(book_number < 2000):
     try:
         author_id_list = []
         book = gc.book(book_number)
@@ -35,31 +36,29 @@ while(book_number < 5):
             "abstract": book.description
         }
         book_list.append(book_dic)
-        book_search_dic[book.title] = book_number
+        book_search_dic[(book_number,book.title)] = author_id_list
         book_number += 1
     except:
         book_number += 1
 
-print(book_search_dic)
-
 #delete repeat author
 new_author_id_list = list(set(author_id_list_all))
+
+# author_book_dic = dict().fromkeys(new_author_id_list, [])
+
+author_book_dic = {}
+for key, value_list in book_search_dic.items():
+    for value in value_list:
+        author_book_dic.setdefault(value, []).append(key)
+
 for author_id in new_author_id_list:
     author = gc.author(author_id)
     author_book = author.books
     new_author_book = [str(xb) for xb in author_book]
-    print(new_author_book)
     mybookIds = []
     mybooks = []
-    for temp_author_books in new_author_book:
-        # try:
-        #     mybookIds.append(book_search_dic[temp_author_books])
-        # except:
-        #     pass
-        if temp_author_books in book_search_dic:
-            # print(author, temp_author_books)
-            mybookIds.append(str(book_search_dic[temp_author_books]))
-            mybooks.append(temp_author_books)
+    mybooks = [books[1] for books in author_book_dic[author_id]]
+    mybookIds = [str(books[0]) for books in author_book_dic[author_id]]
     authors_dic = {
         'id': str(author.gid),
         "name": author.name,
