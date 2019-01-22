@@ -3,8 +3,6 @@ goodreads
 
 using getjson.py to get books and authors from goodreads, based on https://github.com/sefakilic/goodreads
 
-|Build Status| |Coverage Status| |Documentation Status| |Downloads|
-|Latest Version| |Supported Python versions| |License|
 
 This package provides a Python interface for the `Goodreads
 API <http://goodreads.com/api>`__. Using it, you can do pretty much
@@ -18,6 +16,7 @@ This package depends on the following packages:
 -  xmltodict
 -  requests
 -  rauth
+-  json
 
 They can be installed using ``pip``.
 
@@ -25,18 +24,16 @@ They can be installed using ``pip``.
 
     sudo pip install -r requirements.txt
 
-If you want to contribute to this package, you will need the ``nose``
-package as well.
-
-Installation
+Source
 ------------
+getjson.py
+- get books and authors data, and save the data into json format
 
-To install, run the following command from the top-level package
-directory.
+author.json
+- author data
 
-::
-
-    sudo python setup.py install
+book.json
+- book data
 
 Getting Started
 ---------------
@@ -157,41 +154,3 @@ Goodreads API also allows to list events happening in an area.
     >>> event.city
     u'Wrightsville'
 
-Documentation
--------------
-
-Read more about this package
-`here <http://goodreads.readthedocs.org/en/latest/>`__.
-
-Contribution
-------------
-
-If you find an API method that is not supported by this package, feel
-free to create a Github issue. Also, you are more than welcome to submit
-a pull request for a bug fix or additional feature.
-
-License
--------
-
-`MIT License <http://opensource.org/licenses/mit-license.php>`__
-
-Acknowledgment
---------------
-
-Thanks to `Paul Shannon <https://github.com/paulshannon>`__ for
-providing 'goodreads' package at PyPI.
-
-.. |Build Status| image:: http://img.shields.io/travis/sefakilic/goodreads.svg
-   :target: https://travis-ci.org/sefakilic/goodreads
-.. |Coverage Status| image:: http://img.shields.io/coveralls/sefakilic/goodreads.svg
-   :target: https://coveralls.io/r/sefakilic/goodreads
-.. |Documentation Status| image:: https://readthedocs.org/projects/goodreads/badge/?version=latest
-   :target: https://readthedocs.org/projects/goodreads/?badge=latest
-.. |Downloads| image:: https://img.shields.io/pypi/dm/goodreads.svg
-   :target: https://pypi.python.org/pypi/goodreads/
-.. |Latest Version| image:: https://img.shields.io/pypi/v/goodreads.svg
-   :target: https://pypi.python.org/pypi/goodreads/
-.. |Supported Python versions| image:: https://img.shields.io/pypi/pyversions/goodreads.svg
-   :target: https://pypi.python.org/pypi/goodreads/
-.. |License| image:: https://img.shields.io/pypi/l/goodreads.svg
-   :target: https://pypi.python.org/pypi/goodreads/
