@@ -1,0 +1,23 @@
+{
+  "db": {
+    "name": "db",
+    "connector": "memory"
+  },
+  "book-cloudant": {
+    "url": "https://b9ad2a3c-35fd-4f85-8402-9fda64fb3f94-bluemix:d6e860c3cbcddc2ada3160d52357a95c5def144c13b67dd4d992995382d2961f@b9ad2a3c-35fd-4f85-8402-9fda64fb3f94-bluemix.cloudant.com",
+    "database": "book",
+    "username": "b9ad2a3c-35fd-4f85-8402-9fda64fb3f94-bluemix",
+    "password": "d6e860c3cbcddc2ada3160d52357a95c5def144c13b67dd4d992995382d2961f",
+    "name": "book-cloudant",
+    "modelIndex": "",
+    "connector": "cloudant"
+  },
+  "author-cloudant": {
+    "url": "https://b9ad2a3c-35fd-4f85-8402-9fda64fb3f94-bluemix:d6e860c3cbcddc2ada3160d52357a95c5def144c13b67dd4d992995382d2961f@b9ad2a3c-35fd-4f85-8402-9fda64fb3f94-bluemix.cloudant.com",
+    "database": "author",
+    "username": "b9ad2a3c-35fd-4f85-8402-9fda64fb3f94-bluemix",
+    "password": "d6e860c3cbcddc2ada3160d52357a95c5def144c13b67dd4d992995382d2961f",
+    "name": "author-cloudant",
+    "connector": "cloudant"
+  }
+}

@@ -1,4 +1,0 @@
-xmltodict
-requests
-rauth
-json

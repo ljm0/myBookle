@@ -1,0 +1,25 @@
+{
+  "name": "Author",
+  "plural": "Authors",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "name": {
+      "type": "string",
+      "required": false
+    }
+  },
+  "validations": [],
+  "relations": {
+    "books": {
+      "type": "hasAndBelongsToMany",
+      "model": "Book",
+      "foreignKey": "bookId"
+    }
+  },
+  "acls": [],
+  "methods": {}
+}

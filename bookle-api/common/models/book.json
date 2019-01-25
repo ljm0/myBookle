@@ -1,0 +1,62 @@
+{
+  "name": "Book",
+  "plural": "Books",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "ISBN": {
+      "type": "string",
+      "required": false
+    },
+    "abstract": {
+      "type": "string",
+      "required": false
+    },
+    "id": {
+      "type": "string",
+      "id": true,
+      "required": true,
+      "isArray": false
+    },
+    "link": {
+      "type": "string",
+      "required": false
+    },
+    "name": {
+      "type": "string",
+      "required": false
+    },
+    "pages": {
+      "type": "number",
+      "required": false
+    },
+    "publishYear": {
+      "type": "number",
+      "required": false
+    },
+    "rating": {
+      "type": "number",
+      "required": false
+    },
+    "tags": {
+      "type": [
+        "string"
+      ],
+      "required": false,
+      "isArray": true
+    }
+  },
+  "validations": [],
+  "relations": {
+    "authors": {
+      "type": "hasAndBelongsToMany",
+      "model": "Author",
+      "foreignKey": "authorId"
+    }
+  },
+  "acls": [],
+  "methods": {}
+}
