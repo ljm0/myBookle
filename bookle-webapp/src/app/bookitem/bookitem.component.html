@@ -1,3 +1,15 @@
 <div class="bkl-bookitem">
-  {{ index }}. {{ book.name }}
+  <div class="card border-primary mb-3" style="max-width: 18rem;">
+    <div class="card-header">{{ index }}. {{ book.name }}</div>
+    <div class="card-body">
+      <h6 class="card-subtitle mb-2 text-muted">rating: {{ book.rating}}</h6>
+      <p class="card-text">{{ book.abstract}}}</p>
+      <a href="#" class="card-link">book link</a>
+      <a href="#" class="card-link">{{ book.authors}}</a>
+    </div>
+  </div>
+  <button (click)="detail = !detail">detail</button>
+  <div *ngIf="detail">
+    <bkl-bookdetail [book]="book"></bkl-bookdetail>
+  </div>
 </div>

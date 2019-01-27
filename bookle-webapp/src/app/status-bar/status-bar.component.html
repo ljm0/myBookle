@@ -1,0 +1,10 @@
+<div class="bkl-status-bar">
+  <div *ngIf="isUserLoggedIn">
+    <span>Welcome, {{ nickname }}</span>
+    <span *ngIf="isAdmin">[Admin]</span>
+    <span class="bkl-clickable" (click)="logout()">logout</span>
+  </div>
+  <div *ngIf="!isUserLoggedIn">
+    <span class="bkl-clickable" (click)="redirectToLogin()">login</span>
+  </div>
+</div>

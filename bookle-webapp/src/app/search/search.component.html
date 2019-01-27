@@ -1,0 +1,48 @@
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+<h1>Bookle</h1>
+<div class="div1">
+<div class="btn-group mr-3">
+  <select [(ngModel)]="searchOption" class="btn btn-primary">
+    <option [ngValue]="searchBook">book</option>
+    <option [ngValue]="searchAuthor">author</option>
+  </select>
+  <input type="text" style="width:600px" [(ngModel)]="searchText">
+  <button class="btn-primary" (click)="searchOption.doSearch(searchText)">search</button>
+</div>
+</div>
+
+<div class="div2">
+    <bkl-booklist *ngIf="searchResult == 'book'" [books]="books"></bkl-booklist>
+</div>
+
+<!-- <bkl-authorlist *ngIf="searchResult == 'author'" [authors]="authors"></bkl-authorlist>  -->
+
+
+    <!-- <input type="text" [(ngModel)]='searchText'>
+    <button (click)="show = !show">show</button> -->
+    
+    
+    <!-- <div *ngIf="show">
+      <bkl-booklist [books]="books"></bkl-booklist>
+    </div> -->
+    
+<!-- <div>
+  <select [(ngModel)]="searchOption">
+    <option [ngValue]="searchBook">book</option>
+    <option [ngValue]="searchAuthor">author</option>
+  </select>
+  <input type="text" [(ngModel)]="searchText">
+  <button (click)="searchOption.doSearch(searchText)">search</button>
+</div>
+<bkl-booklist *ngIf="searchResult == 'book'" [books]="books"></bkl-booklist>
+<bkl-authorlist *ngIf="searchResult == 'author'" [authors]="authors"></bkl-authorlist>  -->
+<!-- <div class="btn-group mr-3" class="div1">
+  <select [(ngModel)]="searchOption" class="btn btn-primary">
+    <option [ngValue]="searchBook">book</option>
+    <option [ngValue]="searchAuthor">author</option>
+  </select>
+  <input type="text" [(ngModel)]="searchText">
+  <button class="btn-primary" (click)="searchOption.doSearch(searchText)">search</button>
+</div>
+<bkl-booklist *ngIf="searchResult == 'book'" [books]="books"></bkl-booklist> -->
+<!-- <bkl-authorlist *ngIf="searchResult == 'author'" [authors]="authors"></bkl-authorlist>  -->

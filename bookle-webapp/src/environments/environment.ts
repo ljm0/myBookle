@@ -5,7 +5,7 @@
 
 export const environment = {
   production: false,
-  apiEndpoint: 'https://172.31.0.114:4002/api',
+  apiEndpoint: 'http://127.0.0.1:4001/api',
   auth: {
     clientId: 'default',
     clientSecret: 'SECRET'

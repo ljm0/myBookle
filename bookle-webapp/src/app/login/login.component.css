@@ -1,0 +1,11 @@
+.bkl-login-form {
+  padding: 10px;
+  margin: 100px 0 0 100px;
+  width: 200px;
+  border: solid 2px;
+}
+
+.bkl-login-message {
+  color: red;
+}
+

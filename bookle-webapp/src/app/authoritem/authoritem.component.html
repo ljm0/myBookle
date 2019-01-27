@@ -1,0 +1,15 @@
+<div class="bkl-authoritem">
+  <div class="card border-primary mb-3" style="max-width: 18rem;">
+    <div class="card-header">{{ index }}. {{ author.name }}</div>
+    <div class="card-body">
+      <h6 class="card-subtitle mb-2 text-muted">{{ author.nationality}}</h6>
+      <p class="card-text">{{ author.biography }}</p>
+      <a href="#" class="card-link">author link</a>
+      <a href="#" class="card-link">books</a>
+    </div>
+  </div>
+  <button (click)="detail = !detail">detail</button>
+  <div *ngIf="detail">
+    <bkl-authordetail [author]="author"></bkl-authordetail>
+  </div>
+</div>

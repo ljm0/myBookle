@@ -1,0 +1,27 @@
+/* .bkl-authoritem {
+  border: solid 1px;
+  margin: 5px 0;
+} */
+/* .bkl-authoritem {
+  text-align: center; 
+  border: solid 1px;
+  border-width:1px;
+  margin: 0 0 1em 0;
+  color: #eee;
+  background-color: rgb(12, 153, 235);
+  padding: 0;
+} */
+
+/* .bkl-authoritem:hover {
+  background-color: #EEE;
+  cursor: pointer;
+  color: rgb(12, 153, 235);
+} */
+
+.card-text {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 5;
+  -webkit-box-orient: vertical;
+}

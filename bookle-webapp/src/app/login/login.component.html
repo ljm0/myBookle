@@ -1,0 +1,10 @@
+<div class="bkl-login-form">
+  <div>
+    email: <input type="email" [(ngModel)]="email">
+  </div>
+  <div>
+   password: <input type="password" [(ngModel)]="password">
+  </div>
+  <button (click)="login()">login</button>
+  <div class="bkl-login-message" *ngIf="message">{{ message }}</div>
+</div>

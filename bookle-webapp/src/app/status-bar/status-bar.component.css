@@ -1,0 +1,15 @@
+.bkl-status-bar {
+  /* border: solid 2px; */
+  padding: 5px;
+  text-align: right;
+  font-weight: 800;
+}
+
+.bkl-clickable {
+  color: blue;
+  cursor: pointer;
+}
+
+span {
+  font-family: 'Major Mono Display', monospace;
+}
