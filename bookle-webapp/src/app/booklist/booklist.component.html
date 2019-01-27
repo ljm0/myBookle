@@ -1,6 +1,7 @@
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+    crossorigin="anonymous">
 <div class="grid grid-pad">
     <bkl-bookitem *ngFor="let book of books; index as i" class="col-1-4" [index]="i" [book]="book"></bkl-bookitem>
-    <!-- <bkl-bookitem *ngFor="let book of books; index as i" [index]="i" [book]="book"></bkl-bookitem> -->
 </div>
 <div class="mypage">
     <nav aria-label="Page navigation example">
@@ -17,6 +18,3 @@
         </ul>
     </nav>
 </div>
-
-
-<!-- <bkl-bookitem *ngFor="let book of books; index as i" [index]="i" [book]="book"></bkl-bookitem> -->

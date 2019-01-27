@@ -1,18 +1,18 @@
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
   crossorigin="anonymous">
-<div class="bkl-bookitem">
+<div class="bkl-collectionitem">
   <div class="card border-primary mb-3" style="max-width: 18rem;">
-    <div class="card-header">{{ index }}. {{ book.name }}</div>
+    <div class="card-header">{{ index }}. {{ collection.name }}</div>
     <div class="card-body">
-      <h6 class="card-subtitle mb-2 text-muted">rating: {{ book.rating}}</h6>
-      <p class="card-text">{{ book.abstract}}}</p>
+      <h6 class="card-subtitle mb-2 text-muted">rating: {{ collection.rating}}</h6>
+      <p class="card-text">{{ collection.abstract}}}</p>
       <a href="#" class="card-link">book link</a>
-      <a href="#" class="card-link">{{ book.authors}}</a>
+      <a href="#" class="card-link">{{ collection.authors}}</a>
     </div>
   </div>
   <button (click)="detail = !detail" type="button" class="btn btn-outline-primary btn-sm">detail</button>
-  <button type="button" class="btn  btn-outline-primary btn-sm">add to collection</button>
+  <button type="button" class="btn  btn-outline-primary btn-sm">remove</button>
   <div *ngIf="detail">
-    <bkl-bookdetail [book]="book"></bkl-bookdetail>
+    <bkl-collectiondetail [collection]="collection"></bkl-collectiondetail>
   </div>
 </div>

@@ -10,15 +10,10 @@ export class BookitemComponent implements OnInit {
 
   @Input() book: Book;
   @Input() index: number;
-  // selectedBook: Book;
   constructor() { }
 
   ngOnInit() {
     this.index += 1;
   }
 
-
-  // onSelect(book: Book): void {
-  //   this.selectedBook = book;
-  // }
 }

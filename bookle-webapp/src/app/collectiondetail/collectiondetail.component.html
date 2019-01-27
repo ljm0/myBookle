@@ -1,0 +1,13 @@
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+  crossorigin="anonymous">
+<div class="list-group">
+  <li class="list-group-item active">{{ collection.name }}</li>
+  <li class="list-group-item">id: {{ collection.id }}</li>
+  <li class="list-group-item">ISBN: {{ collection.ISBN }}</li>
+  <li class="list-group-item">rating: {{ collection.rating }}</li>
+  <li class="list-group-item">publishYear: {{ collection.publishYear }}</li>
+  <li class="list-group-item">pages: {{ collection.pages }}</li>
+  <li class="list-group-item">book categories: {{ collection.tags }}</li>
+  <a href="#" class="list-group-item list-group-item-action">link: {{ collection.link }}</a>
+  <a href="#" class="list-group-item list-group-item-action">authors: {{ collection.authors }}</a>
+</div>
