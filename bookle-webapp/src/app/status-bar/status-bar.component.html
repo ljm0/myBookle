@@ -2,7 +2,16 @@
   <div *ngIf="isUserLoggedIn">
     <span>Welcome, {{ nickname }}</span>
     <span *ngIf="isAdmin">[Admin]</span>
+    <br>
     <span class="bkl-clickable" (click)="logout()">logout</span>
+    <br>
+    <div *ngIf="!isAdmin">
+      <span class="bkl-clickable" (click)="redirectToCollection()">My Collection</span>
+    </div>>
+    <div *ngIf="isAdmin">
+      <span class="bkl-clickable" (click)="redirectToAdmin()">Manage Books</span>
+      <span class="bkl-clickable" (click)="redirectToAdminAdd()">Add Book</span>
+    </div>>
   </div>
   <div *ngIf="!isUserLoggedIn">
     <span class="bkl-clickable" (click)="redirectToLogin()">login</span>

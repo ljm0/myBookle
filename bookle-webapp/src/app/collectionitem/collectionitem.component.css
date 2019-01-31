@@ -5,3 +5,7 @@
   -webkit-line-clamp: 5;
   -webkit-box-orient: vertical;
 }
+
+.card-link {
+    color: rgba(44, 155, 87, 0.938);
+  }

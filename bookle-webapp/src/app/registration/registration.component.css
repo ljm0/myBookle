@@ -50,7 +50,7 @@ body{
 	font-weight: 800;
 }
 
-.bkl-login-form {
+.bkl-registration-form {
   position: absolute;
 	top: calc(50% - 75px);
 	left: calc(50% - 50px);
@@ -60,7 +60,7 @@ body{
 	z-index: 2;
 }
 
-.bkl-login-form input[type=email]{
+.bkl-registration-form input[type=email]{
   width: 250px;
 	height: 30px;
 	background: transparent;
@@ -73,7 +73,7 @@ body{
 	padding: 4px;
 }
 
-.bkl-login-form input[type=password]{
+.bkl-registration-form input[type=password]{
 	width: 250px;
 	height: 30px;
 	background: transparent;
@@ -87,7 +87,7 @@ body{
 	margin-top: 10px;
 }
 
-.bkl-login-button{
+.bkl-registration-button{
 	width: 260px;
 	height: 35px;
 	background: #fff;
@@ -110,11 +110,11 @@ body{
   color: rgba(255,255,255,0.6);
 }
 
-.bkl-login-button:hover{
+.bkl-registration-button:hover{
 	opacity: 0.8;
 }
 
-.bkl-login-button:active{
+.bkl-registration-button:active{
 	opacity: 0.6;
 }
 

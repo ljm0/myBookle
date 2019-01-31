@@ -9,6 +9,7 @@ import { BookitemComponent } from './bookitem/bookitem.component';
 import { BookService } from './services/book.service';
 import { AuthorService } from './services/author.service';
 import { CollectionService } from './services/collection.service';
+import { AdminService } from './services/admin.service';
 import { ApicInterceptor } from './auth/apicInterceptor';
 import { AuthenticationService } from './services/authentication.service';
 import { StatusBarComponent } from './status-bar/status-bar.component';
@@ -23,6 +24,12 @@ import { CollectionComponent } from './collection/collection.component';
 import { CollectionlistComponent } from './collectionlist/collectionlist.component';
 import { CollectionitemComponent } from './collectionitem/collectionitem.component';
 import { CollectiondetailComponent } from './collectiondetail/collectiondetail.component';
+import { RegistrationComponent } from './registration/registration.component';
+import { AdminComponent } from './admin/admin.component';
+import { AdminBooklistComponent } from './admin-booklist/admin-booklist.component';
+import { AdminBookitemComponent } from './admin-bookitem/admin-bookitem.component';
+import { AdminBookdetailComponent } from './admin-bookdetail/admin-bookdetail.component';
+import { AdminAddComponent } from './admin-add/admin-add.component';
 
 
 @NgModule({
@@ -40,7 +47,13 @@ import { CollectiondetailComponent } from './collectiondetail/collectiondetail.c
     CollectionComponent,
     CollectionlistComponent,
     CollectionitemComponent,
-    CollectiondetailComponent
+    CollectiondetailComponent,
+    RegistrationComponent,
+    AdminComponent,
+    AdminBooklistComponent,
+    AdminBookitemComponent,
+    AdminBookdetailComponent,
+    AdminAddComponent
   ],
   imports: [
     BrowserModule,
@@ -52,6 +65,7 @@ import { CollectiondetailComponent } from './collectiondetail/collectiondetail.c
     BookService,
     AuthorService,
     CollectionService,
+    AdminService,
     AuthenticationService,
     {
       provide: HTTP_INTERCEPTORS,

@@ -32,6 +32,18 @@ export class StatusBarComponent implements DoCheck {
     this.router.navigate(['/login']);
   }
 
+  redirectToCollection() {
+    this.router.navigate(['/collection']);
+  }
+
+  redirectToAdmin() {
+    this.router.navigate(['/admin']);
+  }
+
+  redirectToAdminAdd() {
+    this.router.navigate(['/admin-add']);
+  }
+
   logout() {
     localStorage.removeItem('userInfo');
     this.router.navigate(['/']);

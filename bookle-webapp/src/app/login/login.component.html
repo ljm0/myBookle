@@ -1,10 +1,14 @@
-<div class="bkl-login-form">
-  <div>
-    email: <input type="email" [(ngModel)]="email">
-  </div>
-  <div>
-   password: <input type="password" [(ngModel)]="password">
-  </div>
-  <button (click)="login()">login</button>
-  <div class="bkl-login-message" *ngIf="message">{{ message }}</div>
+<div class="body"></div>
+<div class="grad"></div>
+<div class="header">
+    <div>BOOKLE</div>
 </div>
+  <div class="bkl-login-form">
+      <input type="email" placeholder="email:" [(ngModel)]="email" >
+      <input type="password" placeholder="password:"[(ngModel)]="password">
+      <button class="bkl-login-button" (click)="login()">login</button>
+      <button class="bkl-login-button" (click)="redirectToRegistration()">Register now!</button>
+    <div class="bkl-login-message" *ngIf="message">{{ message }}</div>
+  </div>
+
+

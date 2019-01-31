@@ -4,14 +4,14 @@
   <div class="card border-primary mb-3" style="max-width: 18rem;">
     <div class="card-header">{{ index }}. {{ book.name }}</div>
     <div class="card-body">
-      <h6 class="card-subtitle mb-2 text-muted">rating: {{ book.rating}}</h6>
-      <p class="card-text">{{ book.abstract}}}</p>
+      <h6 class="card-subtitle mb-2 text-muted">rating: {{ book.rating }}</h6>
+      <p class="card-text">{{ book.abstract }}}</p>
       <a href="#" class="card-link">book link</a>
-      <a href="#" class="card-link">{{ book.authors}}</a>
+      <a href="#" class="card-link">{{ book.authors }}</a>
     </div>
   </div>
   <button (click)="detail = !detail" type="button" class="btn btn-outline-primary btn-sm">detail</button>
-  <button type="button" class="btn  btn-outline-primary btn-sm">add to collection</button>
+  <button type="button" class="btn btn-outline-primary btn-sm">add to collection</button>
   <div *ngIf="detail">
     <bkl-bookdetail [book]="book"></bkl-bookdetail>
   </div>

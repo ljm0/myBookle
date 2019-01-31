@@ -1,0 +1,19 @@
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+  crossorigin="anonymous">
+<div class="bkl-admin-bookitem">
+<table class="table">
+  <tbody>
+    <tr>
+      <th width="10%" scope="row">{{ index }}</th>
+      <td width="50%">{{ adminbook.name }}</td>
+      <td width="20%">ISBN: {{ adminbook.ISBN }}</td>
+      <td width="10%"><button class="button-inline" (click)="detail = !detail" type="button" class="btn btn-outline-danger btn-sm">detail</button></td>
+      <td width="10%"><button class="button-inline" type="button" class="btn btn-outline-danger btn-sm">remove</button></td>
+    </tr>
+  </tbody>
+</table>
+  <div *ngIf="detail">
+    <bkl-admin-bookdetail [adminbook]="adminbook"></bkl-admin-bookdetail>
+  </div>
+</div>
+
