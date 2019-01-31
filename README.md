@@ -1,3 +1,7 @@
+# myBookle
+This is a web application about book service.
+The web app is built by IBM cloud, loopback, Cloudant, Angular.
+
 # Development
 
 1. run `npm install` in `./bookle-api` and `./bookle-webapp`
