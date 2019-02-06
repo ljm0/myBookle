@@ -8,7 +8,8 @@ import { Book } from '../types/book.type';
 })
 export class CollectionlistComponent implements OnInit {
 
-  @Input() collections: Book[];
+  @Input() books: Book[];
+  @Input() isOwnCollection: boolean;
 
   constructor() { }
 

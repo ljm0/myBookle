@@ -1,0 +1,30 @@
+{
+  "name": "Customer",
+  "plural": "Customers",
+  "base": "User",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "nickname": {
+      "type": "string",
+      "required": false,
+      "default": "stranger"
+    },
+    "role": {
+      "type": "string",
+      "required": false
+    }
+  },
+  "validations": [],
+  "relations": {
+    "collection": {
+      "type": "hasOne",
+      "model": "Collection",
+      "foreignKey": ""
+    }
+  },
+  "acls": [],
+  "methods": {}
+}

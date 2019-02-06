@@ -1,6 +1,4 @@
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
     crossorigin="anonymous">
-<h1>{{ nickname }}'s Collection 
-    <button (click)="outputShareableLink()" class="btn-primary">share</button> 
-</h1>
-<bkl-collectionlist [isOwnCollection]="true" [books]="collectionBooks"></bkl-collectionlist>
+<h1>{{ nickname }}'s Collection</h1>
+<bkl-collectionlist [isOwnCollection]="false" [books]="collectionBooks"></bkl-collectionlist>

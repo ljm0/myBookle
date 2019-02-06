@@ -1,5 +1,8 @@
 <div class="bkl-status-bar">
-  <div *ngIf="isUserLoggedIn">
+  <div class="bkl-status-bar__to-search">
+    <a *ngIf="router.url != '/search'" [routerLink]="['/search']">Search</a>
+  </div>
+  <div class="bkl-status-bar__user-info" *ngIf="isUserLoggedIn">
     <span>Welcome, {{ nickname }}</span>
     <span *ngIf="isAdmin">[Admin]</span>
     <br>
@@ -7,13 +10,14 @@
     <br>
     <div *ngIf="!isAdmin">
       <span class="bkl-clickable" (click)="redirectToCollection()">My Collection</span>
-    </div>>
+    </div>
     <div *ngIf="isAdmin">
       <span class="bkl-clickable" (click)="redirectToAdmin()">Manage Books</span>
+      <br>
       <span class="bkl-clickable" (click)="redirectToAdminAdd()">Add Book</span>
-    </div>>
+    </div>
   </div>
-  <div *ngIf="!isUserLoggedIn">
+  <div class="bkl-login" *ngIf="!isUserLoggedIn">
     <span class="bkl-clickable" (click)="redirectToLogin()">login</span>
   </div>
 </div>

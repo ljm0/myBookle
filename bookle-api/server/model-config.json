@@ -13,10 +13,6 @@
       "./mixins"
     ]
   },
-  "User": {
-    "dataSource": "db",
-    "public": true
-  },
   "Book": {
     "dataSource": "book-cloudant",
     "public": true
@@ -24,5 +20,29 @@
   "Author": {
     "dataSource": "author-cloudant",
     "public": true
+  },
+  "Collection": {
+    "dataSource": "collection-cloudant",
+    "public": true
+  },
+  "Customer": {
+    "dataSource": "customer-cloudant",
+    "public": true
+  },
+  "AccessToken": {
+    "dataSource": "access-token-cloudant",
+    "public": false
+  },
+  "ACL": {
+    "dataSource": "acl-cloudant",
+    "public": false
+  },
+  "Role": {
+    "dataSource": "role-cloudant",
+    "public": false
+  },
+  "RoleMapping": {
+    "dataSource": "role-mapping-cloudant",
+    "public": false
   }
 }

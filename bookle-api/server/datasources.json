@@ -19,5 +19,53 @@
     "password": "d6e860c3cbcddc2ada3160d52357a95c5def144c13b67dd4d992995382d2961f",
     "name": "author-cloudant",
     "connector": "cloudant"
+  },
+  "customer-cloudant": {
+    "url": "https://b9ad2a3c-35fd-4f85-8402-9fda64fb3f94-bluemix:d6e860c3cbcddc2ada3160d52357a95c5def144c13b67dd4d992995382d2961f@b9ad2a3c-35fd-4f85-8402-9fda64fb3f94-bluemix.cloudant.com/",
+    "database": "customer",
+    "username": "b9ad2a3c-35fd-4f85-8402-9fda64fb3f94-bluemix",
+    "password": "d6e860c3cbcddc2ada3160d52357a95c5def144c13b67dd4d992995382d2961f",
+    "name": "customer-cloudant",
+    "connector": "cloudant"
+  },
+  "access-token-cloudant": {
+    "url": "https://b9ad2a3c-35fd-4f85-8402-9fda64fb3f94-bluemix:d6e860c3cbcddc2ada3160d52357a95c5def144c13b67dd4d992995382d2961f@b9ad2a3c-35fd-4f85-8402-9fda64fb3f94-bluemix.cloudant.com/",
+    "database": "access-token",
+    "username": "b9ad2a3c-35fd-4f85-8402-9fda64fb3f94-bluemix",
+    "password": "d6e860c3cbcddc2ada3160d52357a95c5def144c13b67dd4d992995382d2961f",
+    "name": "access-token-cloudant",
+    "connector": "cloudant"
+  },
+  "collection-cloudant": {
+    "url": "https://b9ad2a3c-35fd-4f85-8402-9fda64fb3f94-bluemix:d6e860c3cbcddc2ada3160d52357a95c5def144c13b67dd4d992995382d2961f@b9ad2a3c-35fd-4f85-8402-9fda64fb3f94-bluemix.cloudant.com/",
+    "database": "collection",
+    "username": "b9ad2a3c-35fd-4f85-8402-9fda64fb3f94-bluemix",
+    "password": "d6e860c3cbcddc2ada3160d52357a95c5def144c13b67dd4d992995382d2961f",
+    "name": "collection-cloudant",
+    "connector": "cloudant"
+  },
+  "acl-cloudant": {
+    "url": "https://b9ad2a3c-35fd-4f85-8402-9fda64fb3f94-bluemix:d6e860c3cbcddc2ada3160d52357a95c5def144c13b67dd4d992995382d2961f@b9ad2a3c-35fd-4f85-8402-9fda64fb3f94-bluemix.cloudant.com/",
+    "database": "acl",
+    "username": "b9ad2a3c-35fd-4f85-8402-9fda64fb3f94-bluemix",
+    "password": "d6e860c3cbcddc2ada3160d52357a95c5def144c13b67dd4d992995382d2961f",
+    "name": "acl-cloudant",
+    "connector": "cloudant"
+  },
+  "role-cloudant": {
+    "url": "https://b9ad2a3c-35fd-4f85-8402-9fda64fb3f94-bluemix:d6e860c3cbcddc2ada3160d52357a95c5def144c13b67dd4d992995382d2961f@b9ad2a3c-35fd-4f85-8402-9fda64fb3f94-bluemix.cloudant.com/",
+    "database": "role",
+    "username": "b9ad2a3c-35fd-4f85-8402-9fda64fb3f94-bluemix",
+    "password": "d6e860c3cbcddc2ada3160d52357a95c5def144c13b67dd4d992995382d2961f",
+    "name": "role-cloudant",
+    "connector": "cloudant"
+  },
+  "role-mapping-cloudant": {
+    "url": "https://b9ad2a3c-35fd-4f85-8402-9fda64fb3f94-bluemix:d6e860c3cbcddc2ada3160d52357a95c5def144c13b67dd4d992995382d2961f@b9ad2a3c-35fd-4f85-8402-9fda64fb3f94-bluemix.cloudant.com/",
+    "database": "role-mapping",
+    "username": "b9ad2a3c-35fd-4f85-8402-9fda64fb3f94-bluemix",
+    "password": "d6e860c3cbcddc2ada3160d52357a95c5def144c13b67dd4d992995382d2961f",
+    "name": "role-mapping-cloudant",
+    "connector": "cloudant"
   }
 }

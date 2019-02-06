@@ -2,16 +2,17 @@
   crossorigin="anonymous">
 <div class="bkl-authoritem">
   <div class="card border-primary mb-3" style="max-width: 18rem;">
-    <div class="card-header">{{ index }}. {{ author.name }}</div>
+    <div class="card-header">
+        <a [routerLink]="['/authors', author.id]" class="card-link">{{ author.name }}</a>
+    </div>
     <div class="card-body">
       <h6 class="card-subtitle mb-2 text-muted">{{ author.nationality }}</h6>
-      <p class="card-text">{{ author.biography }}</p>
-      <a href="#" class="card-link">author link</a>
-      <a href="#" class="card-link">books</a>
+      <b>[Biography]</b> 
+      <p class="card-text" [innerHTML]="author.biography"></p>
+      <b>[Books]</b> 
+      <div *ngFor="let book of firstThreeBooks">
+        <a class="card-link">- {{ book.name }}</a>
+      </div>
     </div>
-  </div>
-  <button (click)="detail = !detail" type="button" class="btn  btn-outline-primary btn-sm">detail</button>
-  <div *ngIf="detail">
-    <bkl-authordetail [author]="author"></bkl-authordetail>
   </div>
 </div>

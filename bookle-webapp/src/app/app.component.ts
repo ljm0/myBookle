@@ -33,8 +33,8 @@ export class AppComponent implements OnInit {
 
     // this.bookService.getBooksByAuthorId('1077326')
     //   .subscribe(data => this.books = data);
-    this.authorService.getAuthorsByBookId('1')
-      .subscribe(data => this.authors = data);
+    // this.authorService.getAuthorsByBookId('1')
+    //   .subscribe(data => this.authors = data);
   //   this.authenticationService.login('test@test.com', '123456')
   //     .subscribe(() => {
   //       console.log('success')

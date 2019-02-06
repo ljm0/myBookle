@@ -1,0 +1,20 @@
+{
+  "name": "Collection",
+  "plural": "Collections",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {},
+  "validations": [],
+  "relations": {
+    "books": {
+      "type": "hasAndBelongsToMany",
+      "model": "Book",
+      "foreignKey": ""
+    }
+  },
+  "acls": [],
+  "methods": {}
+}

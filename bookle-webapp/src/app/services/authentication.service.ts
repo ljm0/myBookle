@@ -13,6 +13,15 @@ export class AuthenticationService {
     private http: HttpClient
   ) { }
 
+  register(email: string, password: string, nickname: string): Observable<any> {
+    return this.http.post(`${this.apiRoot}/Customers`, {
+      email: email,
+      password: password,
+      nickname: nickname,
+      role: 'User'
+    });
+  }
+
   login(email: string, password: string): Observable<any> {
     return this.http.post(`${this.apiRoot}/Customers/login`, {
       email: email,

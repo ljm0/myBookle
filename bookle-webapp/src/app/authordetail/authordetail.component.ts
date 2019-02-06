@@ -1,5 +1,7 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { Author } from '../types/author.type';
+import { ActivatedRoute } from '@angular/router';
+import { AuthorService } from '../services/author.service';
 
 @Component({
   selector: 'bkl-authordetail',
@@ -8,13 +10,23 @@ import { Author } from '../types/author.type';
 })
 export class AuthordetailComponent implements OnInit {
 
-  @Input() author: Author;
-  @Input() index: number;
+  private authorId: string;
+  author: Author;
 
-  constructor() { }
+  constructor(
+    private route: ActivatedRoute,
+    private authorService: AuthorService
+  ) { }
 
   ngOnInit() {
-    this.index += 1;
+    this.route.params.subscribe(params => {
+      this.authorId = params['id'];
+      
+      this.authorService.getAuthorById(this.authorId)
+        .subscribe(
+          author => this.author = author
+        );
+    });
   }
 
 }

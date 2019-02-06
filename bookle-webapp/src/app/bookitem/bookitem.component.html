@@ -2,17 +2,17 @@
   crossorigin="anonymous">
 <div class="bkl-bookitem">
   <div class="card border-primary mb-3" style="max-width: 18rem;">
-    <div class="card-header">{{ index }}. {{ book.name }}</div>
+    <div class="card-header">
+      <a [routerLink]="['/books', book.id]" class="card-link">{{ index }}. {{ book.name }}</a>
+    </div>
     <div class="card-body">
       <h6 class="card-subtitle mb-2 text-muted">rating: {{ book.rating }}</h6>
-      <p class="card-text">{{ book.abstract }}}</p>
-      <a href="#" class="card-link">book link</a>
-      <a href="#" class="card-link">{{ book.authors }}</a>
+      <p class="card-text"><b>Abstract:</b> {{ book.abstract }}}</p>
+      <a class="card-link"><b>Authors:</b> {{ authorNames }}</a>
     </div>
   </div>
-  <button (click)="detail = !detail" type="button" class="btn btn-outline-primary btn-sm">detail</button>
-  <button type="button" class="btn btn-outline-primary btn-sm">add to collection</button>
-  <div *ngIf="detail">
-    <bkl-bookdetail [book]="book"></bkl-bookdetail>
-  </div>
+  <button *ngIf="isUserLoggedIn && !this.isAdmin" type="button" class="btn btn-outline-primary btn-sm"
+    (click)="onAddToCollection()">
+    add to collection
+  </button>
 </div>

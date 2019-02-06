@@ -3,10 +3,11 @@
 <div class="header">
     <div>BOOKLE</div>
 </div>
-  <div class="bkl-registration-form">
-      <input type="email" placeholder="Your email:" [(ngModel)]="email" >
-      <input type="password" placeholder="Your password:"[(ngModel)]="password">
-      <input type="password" placeholder="confirm password:"[(ngModel)]="password">
-      <button class="bkl-registration-button">Register!</button>
-    <!-- <div class="bkl-login-message" *ngIf="message">{{ message }}</div> -->
-  </div>
+<div class="bkl-registration-form">
+    <input type="text" placeholder="Your nickname" [(ngModel)]="nickname" required>
+    <input type="email" placeholder="Your email" [(ngModel)]="email" required>
+    <input type="password" placeholder="Your password" [(ngModel)]="password" required>
+    <input type="password" placeholder="confirm password" [(ngModel)]="password_cfm" required>
+    <button class="bkl-registration-button" (click)="onRegister()">Register!</button>
+    <div class="bkl-registration-message" *ngIf="message">{{ message }}</div>
+</div>

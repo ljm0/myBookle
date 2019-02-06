@@ -60,6 +60,19 @@ body{
 	z-index: 2;
 }
 
+.bkl-registration-form input[type=text]{
+  width: 250px;
+	height: 30px;
+	background: transparent;
+	border: 1px solid rgba(255,255,255,0.6);
+	border-radius: 2px;
+	color: #fff;
+	font-family: 'Exo', sans-serif;
+	font-size: 16px;
+	font-weight: 400;
+	padding: 4px;
+}
+
 .bkl-registration-form input[type=email]{
   width: 250px;
 	height: 30px;
@@ -71,6 +84,7 @@ body{
 	font-size: 16px;
 	font-weight: 400;
 	padding: 4px;
+	margin-top: 10px;
 }
 
 .bkl-registration-form input[type=password]{
@@ -118,7 +132,8 @@ body{
 	opacity: 0.6;
 }
 
-.bkl-login-message {
+.bkl-registration-message {
+	margin-top: 10px;
   color: red;
 }
 

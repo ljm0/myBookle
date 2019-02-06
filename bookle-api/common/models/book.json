@@ -9,17 +9,11 @@
   "properties": {
     "ISBN": {
       "type": "string",
-      "required": false
+      "required": true
     },
     "abstract": {
       "type": "string",
-      "required": false
-    },
-    "id": {
-      "type": "string",
-      "id": true,
-      "required": true,
-      "isArray": false
+      "required": true
     },
     "link": {
       "type": "string",
@@ -27,7 +21,7 @@
     },
     "name": {
       "type": "string",
-      "required": false
+      "required": true
     },
     "pages": {
       "type": "number",
@@ -47,6 +41,10 @@
       ],
       "required": false,
       "isArray": true
+    },
+    "isolatedAuthorNames": {
+      "type": "string",
+      "required": false
     }
   },
   "validations": [],
@@ -55,6 +53,11 @@
       "type": "hasAndBelongsToMany",
       "model": "Author",
       "foreignKey": "authorId"
+    },
+    "collections": {
+      "type": "hasAndBelongsToMany",
+      "model": "Collection",
+      "foreignKey": ""
     }
   },
   "acls": [],

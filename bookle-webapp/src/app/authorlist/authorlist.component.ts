@@ -1,23 +1,38 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, OnChanges } from '@angular/core';
 import { Author } from '../types/author.type';
-import { AuthorService } from '../services/author.service';
 
 @Component({
   selector: 'bkl-authorlist',
   templateUrl: './authorlist.component.html',
   styleUrls: ['./authorlist.component.css']
 })
-export class AuthorlistComponent implements OnInit {
+export class AuthorlistComponent implements OnChanges {
+
+  private ITEM_PER_PAGE = 3;
+
+  totalPage: number;
+  currentPage: number;
+  pageNumbers;
+  displayedAuthors: Author[];
 
   @Input() authors: Author[];
 
-  constructor(
-    private authorService: AuthorService
-  ) { }
+  constructor() { }
 
-  ngOnInit() {
-    this.authorService.getAuthorsByBookId('1')
-      .subscribe(data => this.authors = data);
+  private calcPageNumber(itemsCount, itemsPerPage): number {
+    return Math.floor((itemsCount - 1) / itemsPerPage) + 1;
+  }
+
+  private setPage(pageNumber: number) {
+    this.currentPage = pageNumber;
+    this.displayedAuthors = 
+      this.authors.slice((pageNumber-1)*this.ITEM_PER_PAGE, pageNumber*this.ITEM_PER_PAGE);
+  }
+
+  ngOnChanges() {
+    this.totalPage = this.calcPageNumber(this.authors.length, this.ITEM_PER_PAGE);
+    this.pageNumbers = Array(this.totalPage).fill(0).map((x,i) => i+1);
+    this.setPage(1);
   }
 
 }

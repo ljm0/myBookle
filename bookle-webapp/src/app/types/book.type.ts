@@ -14,4 +14,5 @@ export interface Book {
   link: string;
   tags: string[];
   abstract: string;
+  isolatedAuthorNames: string;
 }

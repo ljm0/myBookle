@@ -1,42 +1,52 @@
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
-    crossorigin="anonymous">
+  crossorigin="anonymous">
 <h1>Add Book</h1>
-<form class="addform">
-    <div class="form-group">
-       <label for="Input2">Book name</label>
-       <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Book name">
-     </div>
-     <div class="form-group">
-       <label for="Input2">Book ID</label>
-      <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Book ID">
+<form class="bkl-add-book">
+  <div class="form-group">
+    <label for="Input2">Book name</label>
+    <input type="text" class="form-control" placeholder="Book name"
+      name="name" [(ngModel)]="book.name">
+  </div>
+  <div class="form-group">
+      <label for="Input10">Authors</label>
+      <input type="text" class="form-control" placeholder="Authors"
+        name="isolatedAuthorNames" [(ngModel)]="book.isolatedAuthorNames">
     </div>
-    <div class="form-group">
-        <label for="Input3">ISBN</label>
-       <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="ISBN">
+  <div class="form-group">
+      <label for="Input9">Abstract</label>
+      <textarea class="form-control bkl-textarea" placeholder="Abstract (HTML syntax supported)"
+        name="abstract" [(ngModel)]="book.abstract"></textarea>
     </div>
-    <div class="form-group">
-        <label for="Input4">Rating</label>
-       <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Rating">
-     </div>
-     <div class="form-group">
-        <label for="Input5">Publish Year</label>
-       <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Publish Year">
-     </div>
-     <div class="form-group">
-        <label for="Input6">Pages</label>
-       <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Pages">
-     </div>
-     <div class="form-group">
-        <label for="Input7">Books Categories</label>
-       <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Books Categories">
-     </div>
-     <div class="form-group">
-        <label for="Input8">Book Link</label>
-       <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Book Link">
-     </div>
-     <div class="form-group">
-        <label for="Input9">Authors</label>
-       <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Authors">
-     </div>
-     <button type="submit" class="btn btn-primary mb-2">Submit</button>
- </form>
+  <div class="form-group">
+    <label for="Input3">ISBN</label>
+    <input type="text" class="form-control" placeholder="ISBN"
+      name="ISBN" [(ngModel)]="book.ISBN">
+  </div>
+  <div class="form-group">
+    <label for="Input4">Rating</label>
+    <input type="number" class="form-control" placeholder="Rating"
+      name="rating" [(ngModel)]="book.rating">
+  </div>
+  <div class="form-group">
+    <label for="Input5">Publish Year</label>
+    <input type="number" class="form-control" placeholder="Publish Year"
+      name="publishYear" [(ngModel)]="book.publishYear">
+  </div>
+  <div class="form-group">
+    <label for="Input6">Pages</label>
+    <input type="number" class="form-control" placeholder="Pages"
+      name="pages" [(ngModel)]="book.pages">
+  </div>
+  <div class="form-group">
+    <label for="Input7">Books Categories</label>
+    <input type="string" class="form-control" placeholder="Books Categories (separated with commas)"
+      name="tags_z" [(ngModel)]="tags_z">
+  </div>
+  <div class="form-group">
+    <label for="Input8">Book Link</label>
+    <input type="text" class="form-control" placeholder="Book Link"
+      name="link" [(ngModel)]="book.link">
+  </div>
+  
+  <button type="submit" class="btn btn-primary mb-2" (click)="onAdd()">Add</button>
+</form>

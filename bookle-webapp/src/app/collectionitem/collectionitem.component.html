@@ -1,18 +1,22 @@
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
   crossorigin="anonymous">
 <div class="bkl-collectionitem">
-  <div class="card border-success mb-3" style="max-width: 18rem;">
-    <div class="card-header">{{ index }}. {{ collection.name }}</div>
+  <div class="card border-primary mb-3" style="max-width: 18rem;">
+    <div class="card-header">
+      <a [routerLink]="['/books', book.id]" class="card-link">{{ book.name }}</a>
+    </div>
     <div class="card-body">
-      <h6 class="card-subtitle mb-2 text-muted">rating: {{ collection.rating }}</h6>
-      <p class="card-text">{{ collection.abstract }}}</p>
-      <a href="#" class="card-link">book link</a>
-      <a href="#" class="card-link">{{ collection.authors }}</a>
+      <h6 class="card-subtitle mb-2 text-muted">rating: {{ book.rating }}</h6>
+      <p class="card-text"><b>Abstract:</b> {{ book.abstract }}}</p>
+      <a class="card-link"><b>Authors:</b> {{ authorNames }}</a>
     </div>
   </div>
-  <button (click)="detail = !detail" type="button" class="btn btn-outline-success btn-sm">detail</button>
-  <button type="button" class="btn btn-outline-success btn-sm">remove</button>
-  <div *ngIf="detail">
-    <bkl-collectiondetail [collection]="collection"></bkl-collectiondetail>
-  </div>
+  <button *ngIf="isOwnCollection" type="button" class="btn btn-outline-primary btn-sm"
+    (click)="onRemove()">
+    remove
+  </button>
+  <button *ngIf="isUserLoggedIn && !this.isAdmin && !isOwnCollection" type="button" class="btn btn-outline-primary btn-sm"
+    (click)="onAddToCollection()">
+    add to collection
+  </button>
 </div>

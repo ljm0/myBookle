@@ -7,5 +7,10 @@
 }
 
 .card-link {
-    color: rgba(44, 155, 87, 0.938);
-  }
+  color: rgba(44, 155, 87, 0.938);
+}
+
+.bkl-collectionitem button {
+  width: 100%;
+  margin-top: -20px;
+}

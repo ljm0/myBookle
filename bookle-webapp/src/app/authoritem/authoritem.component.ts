@@ -1,20 +1,26 @@
-import { Component, OnInit, Input } from '@angular/core';
-import { Author } from '../types/author.type';
+import { Component, OnInit, Input, OnChanges } from '@angular/core';
+import { Author, BookReference } from '../types/author.type';
+import { Book } from '../types/book.type';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'bkl-authoritem',
   templateUrl: './authoritem.component.html',
   styleUrls: ['./authoritem.component.css']
 })
-export class AuthoritemComponent implements OnInit {
+export class AuthoritemComponent implements OnChanges {
+
+  firstThreeBooks: BookReference[];
 
   @Input() author: Author;
-  @Input() index: number;
 
-  constructor() { }
+  constructor(
+    private router: Router
+  ) { }
 
-  ngOnInit() {
-    this.index += 1;
+  ngOnChanges() {
+    if (this.author.books)
+      this.firstThreeBooks = this.author.books.slice(0, 3);
   }
 
 }

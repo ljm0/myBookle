@@ -17,9 +17,5 @@ bkl-collectionitem {
 }
 
 .grid {
-  margin: 0;
-}
-
-.mypage {
-     clear: both;
+  margin-left: 200px;
 }

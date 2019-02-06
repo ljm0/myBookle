@@ -1,20 +1,23 @@
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
   crossorigin="anonymous">
 <div class="grid grid-pad">
-  <bkl-admin-bookitem *ngFor="let adminbook of adminbooks; index as i" [index]="i" [adminbook]="adminbook"></bkl-admin-bookitem>
+  <bkl-admin-bookitem *ngFor="let book of displayedBooks; index as i" [index]="getTotalIndex(currentPage, i)" [book]="book"></bkl-admin-bookitem>
 </div>
 <div class="mypage">
   <nav aria-label="Page navigation example">
     <ul class="pagination justify-content-center">
-      <li class="page-item disabled">
-        <a class="page-link" href="#" tabindex="-1">Previous</a>
-      </li>
-      <li class="page-item"><a class="page-link" href="#">1</a></li>
-      <li class="page-item"><a class="page-link" href="#">2</a></li>
-      <li class="page-item"><a class="page-link" href="#">3</a></li>
-      <li class="page-item">
-        <a class="page-link" href="#">Next</a>
-      </li>
+        <li class="page-item"
+          [ngClass]="{disabled: currentPage == 1}">
+            <a class="page-link" (click)="setPage(currentPage-1)">Previous</a>
+        </li>
+        <li *ngFor="let pageNumber of pageNumbers" class="page-item"
+          [ngClass]="{active: pageNumber == currentPage}">
+          <a class="page-link" (click)="setPage(pageNumber)">{{ pageNumber }}</a>
+        </li>
+        <li class="page-item"
+          [ngClass]="{disabled: currentPage >= totalPage}">
+            <a class="page-link" (click)="setPage(currentPage+1)">Next</a>
+        </li>
     </ul>
   </nav>
 </div>

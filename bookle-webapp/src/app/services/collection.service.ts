@@ -13,8 +13,17 @@ export class CollectionService {
     private http: HttpClient
   ) { }
 
-  getBooksByAuthorId(authorId: string): Observable<Book[]> {
-    return this.http.get<Book[]>(`${this.apiRoot}/Authors/${authorId}/books`);
+  getBooksInCollection(collectionId: string): Observable<Book[]> {
+    return this.http.get<Book[]>(`${this.apiRoot}/Collections/${collectionId}/books`);
   }
+
+  addBookToCollection(collectionId: string, bookId: string): Observable<any> {
+    return this.http.put<any>(`${this.apiRoot}/Collections/${collectionId}/books/rel/${bookId}`, {});
+  }
+
+  removeBookFromCollection(collectionId: string, bookId: string): Observable<any> {
+    return this.http.delete<any>(`${this.apiRoot}/Collections/${collectionId}/books/rel/${bookId}`);
+  }
+
 
 }

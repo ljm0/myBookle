@@ -1,15 +1,18 @@
 h1 {
     text-align: center; 
     font-size: 8em;
-    margin-top: 120px;
+    margin-bottom: 20px;
     color: rgb(12, 153, 235);
   }
 
-  .div1 {
-    text-align: center;
-  }
+.div1 {
+  text-align: center;
+}
 
-  .div2 {
-    margin-top: 30px;
-    margin-left: 100px;
-  }
+.div2 {
+  margin-top: 30px;
+}
+
+table {
+  margin: 0 auto;
+}

@@ -1,8 +1,26 @@
 .bkl-status-bar {
-  /* border: solid 2px; */
-  padding: 5px;
+  padding: 5px; 
+  display: flex;
+  justify-content: space-between;
+}
+
+.bkl-status-bar__to-search {
+  font-size: 30px;
+  margin-left: 20px;
+  z-index: 2;
+}
+
+.bkl-status-bar__to-search a {
+  text-decoration: none;
+}
+
+.bkl-status-bar__user-info {
   text-align: right;
   font-weight: 800;
+}
+
+.bkl-login {
+  z-index: 2;
 }
 
 .bkl-clickable {

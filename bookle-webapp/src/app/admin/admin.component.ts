@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { AdminService } from '../services/admin.service';
 import { Book } from '../types/book.type';
+import { BookService } from '../services/book.service';
 
 @Component({
   selector: 'bkl-admin',
@@ -9,13 +9,19 @@ import { Book } from '../types/book.type';
 })
 export class AdminComponent implements OnInit {
 
-  adminbooks: Book[] = [];
+  books: Book[] = [];
 
-  constructor(private adminService: AdminService) { }
+  constructor(
+    private bookService: BookService
+  ) { }
 
   ngOnInit() {
-    this.adminService.getBooksByAuthorId('1077326')
-      .subscribe(data => this.adminbooks = data);
+    this.bookService.getAllBooks()
+      .subscribe(
+        (books) => {
+          this.books = books;
+        }
+      );
   }
 
 }

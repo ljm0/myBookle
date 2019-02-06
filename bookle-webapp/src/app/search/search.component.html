@@ -6,12 +6,19 @@
     <option [ngValue]="searchBook">book</option>
     <option [ngValue]="searchAuthor">author</option>
   </select>
-  <input type="text" style="width:600px" [(ngModel)]="searchText">
-  <button class="btn-primary" (click)="searchOption.doSearch(searchText)">search</button>
+  <input type="text" style="width:600px" [(ngModel)]="searchText"
+    (keyup.enter)="searchOption.doSearch(searchText)">
+  <button class="btn-primary" 
+    (click)="searchOption.doSearch(searchText)">
+      search
+  </button>
 </div>
 </div>
 
 <div class="div2">
+  <table>
     <bkl-booklist *ngIf="searchResult == 'book'" [books]="books"></bkl-booklist>
+    <bkl-authorlist *ngIf="searchResult == 'author'" [authors]="authors"></bkl-authorlist>
+  </table>
 </div>
 

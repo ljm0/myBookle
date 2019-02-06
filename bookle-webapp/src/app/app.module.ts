@@ -9,7 +9,6 @@ import { BookitemComponent } from './bookitem/bookitem.component';
 import { BookService } from './services/book.service';
 import { AuthorService } from './services/author.service';
 import { CollectionService } from './services/collection.service';
-import { AdminService } from './services/admin.service';
 import { ApicInterceptor } from './auth/apicInterceptor';
 import { AuthenticationService } from './services/authentication.service';
 import { StatusBarComponent } from './status-bar/status-bar.component';
@@ -30,6 +29,8 @@ import { AdminBooklistComponent } from './admin-booklist/admin-booklist.componen
 import { AdminBookitemComponent } from './admin-bookitem/admin-bookitem.component';
 import { AdminBookdetailComponent } from './admin-bookdetail/admin-bookdetail.component';
 import { AdminAddComponent } from './admin-add/admin-add.component';
+import { CustomerService } from './services/customer.service';
+import { CollectionViewComponent } from './collection-view/collection-view.component';
 
 
 @NgModule({
@@ -53,7 +54,8 @@ import { AdminAddComponent } from './admin-add/admin-add.component';
     AdminBooklistComponent,
     AdminBookitemComponent,
     AdminBookdetailComponent,
-    AdminAddComponent
+    AdminAddComponent,
+    CollectionViewComponent
   ],
   imports: [
     BrowserModule,
@@ -65,8 +67,8 @@ import { AdminAddComponent } from './admin-add/admin-add.component';
     BookService,
     AuthorService,
     CollectionService,
-    AdminService,
     AuthenticationService,
+    CustomerService,
     {
       provide: HTTP_INTERCEPTORS,
       useClass: ApicInterceptor,
