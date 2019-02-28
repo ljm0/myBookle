@@ -26,7 +26,7 @@
     }
 ```
 
-## Angular on IBM cloud
+## Deploy on IBM cloud
 - https://bookle.eu-de.mybluemix.net
 - use `deploy2` on IBM cloud
 - PS: There are some bugs on IBM cloud, such as refreshing to 404 error, because of the different build environment between IBM cloud and local. However, you can still use the local running model without bugs.
