@@ -1,6 +1,11 @@
 # Bookle
 - The purpose of the project is to develop an online book searching and sharing system.
 
+## Deploy on IBM cloud
+- https://bookle.eu-de.mybluemix.net
+- use `deploy2` on IBM cloud
+- PS: There are some bugs on IBM cloud, such as refreshing to 404 error, because of the different build environment between IBM cloud and local. However, you can still use the local running model without bugs.
+
 ## Description
 ### branch
 - running on the local: `master` branch
@@ -25,11 +30,6 @@
     clientSecret: 'fB1gU2hD3gN6dB8nK4bJ3xU7wX8fM6fR6sE3bI7hN0iS0sK6iE'
     }
 ```
-
-## Deploy on IBM cloud
-- https://bookle.eu-de.mybluemix.net
-- use `deploy2` on IBM cloud
-- PS: There are some bugs on IBM cloud, such as refreshing to 404 error, because of the different build environment between IBM cloud and local. However, you can still use the local running model without bugs.
 
 ## Login
 ### Customer
