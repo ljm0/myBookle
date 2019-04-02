@@ -3,7 +3,7 @@
 
 
 ## Deploy on IBM cloud
-![avatar](bookle.png)
+![avatar](bookle.PNG)
 - https://bookle.eu-de.mybluemix.net
 - the link above may not work, because IBM only 6 months free for student account
 - use `deploy2` on IBM cloud
