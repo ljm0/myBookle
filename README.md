@@ -1,7 +1,9 @@
 # Bookle
 - The purpose of the project is to develop an online book searching and sharing system.
 
+
 ## Deploy on IBM cloud
+![avatar](bookle.png)
 - https://bookle.eu-de.mybluemix.net
 - the link above may not work, because IBM only 6 months free for student account
 - use `deploy2` on IBM cloud
