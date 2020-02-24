@@ -1,5 +1,6 @@
 # Bookle
 - The purpose of the project is to develop an online book searching and sharing system.
+- The book data is crawled from [Goodreads](https://www.goodreads.com/)
 
 ## Framework
 ![avatar](frame1.png)
