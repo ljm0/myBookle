@@ -2,8 +2,8 @@
 - The purpose of the project is to develop an online book searching and sharing system.
 - The book data is crawled from [Goodreads](https://www.goodreads.com/)
 - Deployed on [IBM Cloud](https://www.ibm.com/cloud)
-- Back-end: Node.js(Loopback framework); RESTful APIs; Cloudant database
-- Front-end: Angular; Bootstrap 
+- Back-end: [Node.js](https://nodejs.org/en/) ([Loopback framework](https://loopback.io/)); RESTful APIs; [Cloudant database](https://www.ibm.com/cloud/cloudant)
+- Front-end: [Angular](https://angular.io/); [Bootstrap](https://getbootstrap.com/)
 
 ## Framework
 ![avatar](frame1.png)
