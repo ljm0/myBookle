@@ -11,7 +11,7 @@
 ## Deploy on IBM cloud
 ![avatar](bookle.PNG)
 - https://bookle.eu-de.mybluemix.net
-- the link above may not work, because IBM only 6 months free for student account
+- the link above may not work now, because IBM only 6 months free for student account
 - use `deploy2` on IBM cloud
 - PS: There are some bugs on IBM cloud, such as refreshing to 404 error, because of the different build environment between IBM cloud and local. However, you can still use the local running model without bugs.
 
