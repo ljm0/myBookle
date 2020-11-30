@@ -1,5 +1,5 @@
 # [Bookle](https://bookle.eu-de.mybluemix.net)
-- The purpose of the project is to develop an online book searching and sharing system.
+- The purpose of this course project is to develop an online book searching and sharing system.
 - The book data is crawled from [Goodreads](https://www.goodreads.com/)
 - Deployed on [IBM Cloud](https://www.ibm.com/cloud)
 - Back-end: [Node.js](https://nodejs.org/en/) ([Loopback framework](https://loopback.io/)); RESTful APIs; [Cloudant database](https://www.ibm.com/cloud/cloudant)
@@ -11,7 +11,7 @@
 ## Deploy on IBM cloud
 ![avatar](bookle.PNG)
 - https://bookle.eu-de.mybluemix.net
-- the link above may not work now, because IBM only 6 months free for student account
+- the link above may not work now, because IBM only provides 6 months free trial for student account
 - use `deploy2` on IBM cloud
 - PS: There are some bugs on IBM cloud, such as refreshing to 404 error, because of the different build environment between IBM cloud and local. However, you can still use the local running model without bugs.
 
